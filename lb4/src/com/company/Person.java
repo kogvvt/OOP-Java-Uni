@@ -113,7 +113,7 @@ public class Person {
     //Zadanie 3c
     public static void sortCsv(String path) {
         Person[] people = Person.fromCsv(path);
-        //Arrays.sort(people,Comparator.comparing(Person::getBirth));
+        Arrays.sort(people,Comparator.comparing(Person::getBirth).reversed());
         Arrays.sort(people, new Comparator<Person>(){
             public int compare(Person p1, Person p2) {
                 return p1.birth.compareTo(p2.birth);

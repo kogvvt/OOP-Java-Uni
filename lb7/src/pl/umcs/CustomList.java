@@ -145,10 +145,9 @@ public class CustomList<T> extends AbstractList<T> {
     @Override
     public Stream<T> stream() {
         Stream.Builder<T> streamBuilder = Stream.builder();
-
-        for(T entry : this)
+        for(T entry : this) {
             streamBuilder.accept(entry);
-
+        }
         return streamBuilder.build();
     }
 }

@@ -21,10 +21,9 @@ public class BinaryPersonPersistenceManager implements PersonPersistenceManager{
             }
 
 
-        } catch (EOFException e) {
-        } catch (IOException e) {
+        } catch (EOFException e ) {
             e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         return people.toArray(new Person[0]);
