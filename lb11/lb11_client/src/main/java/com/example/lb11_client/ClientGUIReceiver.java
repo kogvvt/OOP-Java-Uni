@@ -4,6 +4,7 @@ import com.company.chatclient.ClientReceiver;
 import javafx.application.Platform;
 
 import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class ClientGUIReceiver implements ClientReceiver {
 
@@ -40,7 +41,7 @@ public class ClientGUIReceiver implements ClientReceiver {
 
     @Override
     public void receiveOnline(String[] strings) {
-        mainController.populateOnlineList(Arrays.stream(strings).toList());
+        mainController.populateOnlineList(Arrays.stream(strings).collect(Collectors.toList()));
     }
 
     @Override
